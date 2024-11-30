@@ -38,6 +38,8 @@ Output: [0,1]
 An algorithm that is less than O(n2) time complexity?
 -->
 
+![alt text](https://github.com/sandygoreraza/Leetcode/master/runtime.png?raw=true)
+
 - Space complexity:
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
 
