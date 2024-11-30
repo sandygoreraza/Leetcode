@@ -42,7 +42,7 @@ An algorithm that is less than O(n2) time complexity?
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
 
 
-below is the summary of the code written
+Below is the summary of the code written
 # Code
 ```csharp []
 public class Solution {
