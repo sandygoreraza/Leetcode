@@ -36,7 +36,7 @@ Output: [0,1]
  
 An algorithm that is less than O(n2) time complexity?
  
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot](https://myoctocat.com/assets/images/base-octocat.svg)
 ![alt text](https://github.com/sandygoreraza/Leetcode/blob/master/runtime.png?raw=true)
 
 ![screenshot](runtime.png)
