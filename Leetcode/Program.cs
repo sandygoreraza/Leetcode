@@ -10,7 +10,7 @@ namespace Leetcode
         {
 
 
-/*  Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+/*  Given an array of integers nums and an integer targetNumber, return indices of the two numbers such that they add up to targetNumber.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
@@ -40,10 +40,10 @@ Output: [0, 1] */
 
             AddingArray addingArray = new AddingArray();
 
-            int[] TestArray = { 2, 5, 5, 11 };
-            int target = 10;
+            int[] testArray = { 2, 5, 5, 11 };
+            int targetNumber = 10;
            
-           Console.WriteLine(string.Join(",", addingArray.TwoSum(TestArray, target)));
+           Console.WriteLine(string.Join(",", addingArray.TwoSum(testArray, targetNumber)));
 
             Console.ReadLine();
 

@@ -21,9 +21,9 @@
                         if (sum == target)
                         {
 
-                            int[] newindices = { i, j };
+                            int[] newIndices = { i, j };
 
-                            return newindices;
+                            return newIndices;
                         }
 
                     }
