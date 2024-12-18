@@ -9,41 +9,47 @@ namespace Leetcode
         static void Main(string[] args)
         {
 
-
-/*  Given an array of integers nums and an integer targetNumber, return indices of the two numbers such that they add up to targetNumber.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
-
-
-
-
-Example 1:
-
-Input: nums = [2, 7, 11, 15], target = 9
-Output: [0, 1]
-Explanation: Because nums[0] +nums[1] == 9, we return [0, 1].
-Example 2:
-
-Input: nums = [3, 2, 4], target = 6
-Output: [1, 2]
-Example 3:
-
-Input: nums = [3, 3], target = 6
-Output: [0, 1] */
-
-
-            /*******Solution*******/
+            /*NO AI WAS USED. HONEST TESTS. TESTING MY SKILLS AS AN EXPERIENCED SENIOR DEVELOPER */
 
             /****THE SOLUTION WAS TESTED USING 63 TEST CASES FROM Letcode****/
 
-            AddingArray addingArray = new AddingArray();
+            /**** For Brief explanation for each scenario / Challenge please check each classes ****/
 
-            int[] testArray = { 2, 5, 5, 11 };
-            int targetNumber = 10;
+            /**** Challenge 1  Two Sum from Array ****/
+            TwoSumArray twoSumArray = new TwoSumArray();
+
+            int[] testArray = { 2, 5, 5, 11 ,12,13};
+            int targetNumber = 25;
            
-           Console.WriteLine(string.Join(",", addingArray.TwoSum(testArray, targetNumber)));
+           Console.WriteLine($"" + string.Join(",", twoSumArray.TwoSum(testArray, targetNumber)) + "\n");
+
+
+            /**** Challenge 2 - Best Time to Buy and Sell Stock II ****/
+            BestTimeBuySellStock bestTimeBuySellStock = new BestTimeBuySellStock();
+
+            int[] testPrices = { 7, 1, 5, 3, 6, 4 };
+            int expectedProfit = 7;
+
+            Console.WriteLine($"Expected profit is {expectedProfit} from Array [{string.Join(",", testPrices)}]" + "\n");
+
+
+
+
+            /**** Challenge 3 - Remove Duplicates from Sorted Array ****/
+            RemoveDuplicatesSortedArray removeDuplicatesSortedArray = new RemoveDuplicatesSortedArray();
+
+
+            int[] testSortedArray = { 1, 1, 2 , 3, 3 , 4, 5 };
+            int[] expectedArray = { 1, 2,3,4,5 };
+
+            Console.WriteLine($"Sorted array with Duplicates : [{string.Join(",", testSortedArray)}] expected array : [{string.Join(",", expectedArray)}]");
+
+
+
+
+
+
+
 
             Console.ReadLine();
 
