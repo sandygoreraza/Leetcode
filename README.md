@@ -1,11 +1,19 @@
 # Leetcode  challenges
-```
-Code block
-```# Intuition
 
-<!-- Simple code solution for the below description. -->
+*** Check out code challenges done on Leetcode plateform ***
+*** Disclaimer :  These challenges were done without using an AI .Honest Solutions provided to my best ability ***
 
- 
+<details open>
+
+<summary>[x] ** Challenge 1 - Two Sum from Array **</summary>
+
+### Two Sum
+
+Challenge title :Two Sum
+
+
+Scenario :
+
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -13,6 +21,7 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order.
 
  
+
 Example 1:
 
 Input: nums = [2,7,11,15], target = 9
@@ -26,51 +35,41 @@ Example 3:
 
 Input: nums = [3,3], target = 6
 Output: [0,1]
-
  
 
-# Approach
+Constraints:
 
-
-# Complexity
+2 <= nums.length <= 10^4
+-109 <= nums[i] <= 10^9
+-109 <= target <= 10^9
+Only one valid answer exists.
  
-An algorithm that is less than O(n2) time complexity?
- 
-![Screenshot](https://myoctocat.com/assets/images/base-octocat.svg)
-![alt text](https://github.com/sandygoreraza/Leetcode/blob/master/runtime.png?raw=true)
 
-![screenshot](runtime.png)
+```C#
+    public class TwoSumArray
+    {
 
 
+        public int[] TwoSum(int[] nums, int target)
+        {
 
-- Space complexity:
-<!-- Add your space complexity here, e.g. $$O(n)$$ -->
 
-
-Below is the summary of the code written
-# Code
-```csharp []
-public class Solution {
-    public int[] TwoSum(int[] nums, int target) {
-       
             int sum = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-              // Console.WriteLine(nums[i]);
-
-                    //int start = (i == 0) ? 1 : 0;
+             
 
                     for (int j = i+1; j < nums.Length ; j++)
                     {
                         
                         sum = nums[i] + nums[j];
-                   // Console.WriteLine($"i element {nums[i]} adding j element {nums[j]} : sum is => {sum}");
+                 
                         if (sum == target)
                         {
 
-                            int[] newindices = { i, j };
+                            int[] newIndices = { i, j };
 
-                            return newindices;
+                            return newIndices;
                         }
 
                     }
@@ -80,7 +79,9 @@ public class Solution {
             }
 
             return new int[0];
+        }
 
     }
-}
 ```
+
+</details>
