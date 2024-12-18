@@ -33,10 +33,15 @@ Output: [0,1]
 
 
 # Complexity
-<!---
-
+ 
 An algorithm that is less than O(n2) time complexity?
--->
+ 
+![Screenshot](https://myoctocat.com/assets/images/base-octocat.svg)
+![alt text](https://github.com/sandygoreraza/Leetcode/blob/master/runtime.png?raw=true)
+
+![screenshot](runtime.png)
+
+
 
 - Space complexity:
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
