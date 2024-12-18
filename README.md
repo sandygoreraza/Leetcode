@@ -1,14 +1,16 @@
 # Leetcode  challenges
 
 **Check out code challenges done on Leetcode plateform**
-**Disclaimer :**  These challenges were done without using an AI .Honest Solutions provided to my best ability 
 
 
-[x]Challenge 1 - Two Sum from Array
+**Disclaimer:**  These challenges were done without using an AI .Honest Solutions provided to my best ability 
+
+
+- [x] Challenge 1 - Two Sum from Array
 
 <details open>
 
-<summary> ** Challenge 1 - Two Sum from Array **</summary>
+<summary> **Challenge 1 - Two Sum from Array**</summary>
 
 ### Two Sum
 
