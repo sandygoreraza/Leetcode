@@ -9,11 +9,6 @@ namespace Leetcode
         static void Main(string[] args)
         {
 
-            /*NO AI WAS USED. HONEST TESTS. TESTING MY SKILLS AS AN EXPERIENCED SENIOR DEVELOPER */
-
-            /****THE SOLUTION WAS TESTED USING 63 TEST CASES FROM Letcode****/
-
-            /**** For Brief explanation for each scenario / Challenge please check each classes ****/
 
             /**** Challenge 1  Two Sum from Array ****/
             TwoSumArray twoSumArray = new TwoSumArray();
