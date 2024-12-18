@@ -1,6 +1,6 @@
 # Leetcode  challenges
 
-**Check out code challenges done on Leetcode plateform**
+**Check out code challenges done on Leetcode plateform. More than 63 test cases were used for all the challenges below**
 
 
 **Disclaimer:**  These challenges were done without using an AI .Honest Solutions provided to my best ability 
