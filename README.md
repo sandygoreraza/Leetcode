@@ -10,7 +10,7 @@
 - [x] Challenge 2 - Remove Duplicates from Sorted Array
 - [x] Challenge 3 - Best Time to Buy and Sell Stock II
 - [x] Challenge 4 - Rotate array challenge
-- [ ] 
+ 
 <details open>
 
 <summary> **Challenge 1 - Two Sum from Array**</summary>
