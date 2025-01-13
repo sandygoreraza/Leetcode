@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-
-/*
+﻿/*
                                                 Challenge Type : Easy  
   
 Challenge title : Remove Duplicates from Sorted Array
@@ -59,7 +51,6 @@ nums is sorted in non-decreasing order.
 *******Solution below : 
 
  */
-
 
 namespace Leetcode
 {

@@ -60,24 +60,24 @@ namespace Leetcode
             int sum = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-             
 
-                    for (int j = i+1; j < nums.Length ; j++)
+
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+
+                    sum = nums[i] + nums[j];
+
+                    if (sum == target)
                     {
-                        
-                        sum = nums[i] + nums[j];
-                 
-                        if (sum == target)
-                        {
 
-                            int[] newIndices = { i, j };
+                        int[] newIndices = { i, j };
 
-                            return newIndices;
-                        }
-
+                        return newIndices;
                     }
 
-               
+                }
+
+
 
             }
 

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-/*
+﻿/*
                                                 Challenge Type : Medium  
   
 Challenge title : Best Time to Buy and Sell Stock II
@@ -51,8 +44,6 @@ Constraints:
 
  */
 
-
-
 namespace Leetcode
 {
     internal class BestTimeBuySellStock
@@ -61,7 +52,7 @@ namespace Leetcode
         public int MaxProfit(int[] prices)
         {
 
-          
+
             int lastIndex = prices.Length - 1;
             int profits = 0;
 
