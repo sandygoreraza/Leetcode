@@ -394,7 +394,7 @@ NB: The  RotateArrayQuick class meets all the Constraints above , check out the 
 
  The RotateArray class below executes step by step swapping but it failed on time Constraints mentioned above i.e Time Constraints.
 
- The RotateArray class below successfully executed 37 out of 38 test cases from Leetcode. Failed the last test below the array tested was huge with over a 6000 array elements and K was 54944.
+ The RotateArray class below successfully executed 37 out of 38 test cases from Leetcode. Failed the last test because the array tested was huge with over a 6000 array elements and K was 54944.
 
  
 ```C#
