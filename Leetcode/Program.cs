@@ -58,6 +58,38 @@
             rotateArray.Rotate(testRotateArray, k);
 
 
+            ///Challenge 5 - Contains Duplicate challenge
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine($"Challenge 5 -  Contains Duplicate challenge: \n");
+
+            RotateArrayQuick rotateArrayQuick = new RotateArrayQuick();
+
+            int[] testDuplicatesArray = { 99, -100, 3, 99 };
+
+           bool test =  rotateArrayQuick.ContainsDuplicate(testDuplicatesArray);
+
+            if ( test )
+            {
+                Console.WriteLine(test);
+            }
+
+
+
+            ///Challenge 6 -Single Occurance element challenge
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Challenge 6 -  Single Occurance element challenge: \n");
+
+            SingleNumberSearch SingleOccurance = new SingleNumberSearch();
+
+            int[] singleNumbertest = { 4, 1, 2, 1, 2 };
+
+            int getNumber = SingleOccurance.SingleNumber(singleNumbertest);
+
+            Console.WriteLine($"Single Occurance element in array {string.Join(",", singleNumbertest)} is {getNumber}: \n");
+
+
+
+
 
             Console.ReadLine();
 
