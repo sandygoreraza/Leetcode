@@ -9,7 +9,8 @@
 - [x] Challenge 1 - Two Sum from Array
 - [x] Challenge 2 - Remove Duplicates from Sorted Array
 - [x] Challenge 3 - Best Time to Buy and Sell Stock II
-
+- [x] Challenge 4 - Rotate array challenge
+ 
 <details open>
 
 <summary> **Challenge 1 - Two Sum from Array**</summary>
@@ -275,6 +276,252 @@ Constraints:
 
 
     } 
+```
+
+</details>
+
+<details>
+
+<summary>**Challenge 4 - Rotate array challenge**</summary>
+
+### Rotate array challenge
+
+Challenge title : Rotate array challenge
+
+
+Scenario :
+
+ Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+ 
+
+Example 1:
+
+Input: nums = [1,2,3,4,5,6,7], k = 3
+Output: [5,6,7,1,2,3,4]
+Explanation:
+rotate 1 steps to the right: [7,1,2,3,4,5,6]
+rotate 2 steps to the right: [6,7,1,2,3,4,5]
+rotate 3 steps to the right: [5,6,7,1,2,3,4]
+
+
+Example 2:
+Input: nums = [-1,-100,3,99], k = 2
+Output: [3,99,-1,-100]
+Explanation: 
+rotate 1 steps to the right: [99,-1,-100,3]
+rotate 2 steps to the right: [3,99,-1,-100]
+
+Constraints:
+
+1 <= nums.length <= 105
+-231 <= nums[i] <= 231 - 1
+0 <= k <= 105
+
+ 
+ 
+NB: The  RotateArrayQuick class meets all the Constraints above , check out the other class RotateArray after RotateArrayQuick class below that didn't meet all the constraints i.e (Time Constraint) :
+
+
+```C#
+  internal class RotateArrayQuick
+ {
+
+     public void Rotate(int[] nums, int k)
+     {
+         int elementsCount = nums.Length;
+         int steps = k;
+         
+         k %= elementsCount; // Handle cases where k > elementsCount
+
+         if (k == 0 || elementsCount <= 1) return; // No rotation needed for these cases
+
+
+         int[] toLeftShift = new int[k];
+         int[] toRightShift = new int[nums.Length - k];
+         int sPosition = elementsCount - k;
+         int rshiftIndex = nums.Length - toRightShift.Length;
+         int startingIndex = 0;
+         int[] tempNumsArray = new int[nums.Length];
+         
+         for (int i = 0; i < nums.Length; i++)
+         {
+             tempNumsArray[i] = nums[i];
+
+         }
+
+
+         //Console.WriteLine($"Initial array :[" + string.Join(",", tempNumsArray) + "]\n");
+
+        // Console.WriteLine($"If K = {steps} , then :\n");
+
+         for (int i = 0; i < toLeftShift.Length; i++)
+         {
+        
+                 toLeftShift[startingIndex++] = tempNumsArray[sPosition++];
+         
+         }
+
+
+
+         for (int j = 0; j < toRightShift.Length; j++)
+         {
+         
+                 toRightShift[j] = tempNumsArray[j];
+      
+         }
+
+         for(int l = 0; l < toLeftShift.Length; l++)
+         {
+             nums[l] = toLeftShift[l];
+         }
+
+         for(int r = 0; r < toRightShift.Length ; r++)
+         {
+             nums[rshiftIndex++] = toRightShift[r];
+         }
+
+
+         // Console.WriteLine($"Final Result (after swapping using {steps} k steps)    : [" + string.Join(",", nums) + "]\n");
+        // Console.WriteLine($"To right Shift results    : [" + string.Join(",", toRightShift) + "]\n");
+
+
+
+
+     }
+
+     }
+```
+
+ The RotateArray class below executes step by step swapping but it failed on time Constraints mentioned above i.e Time Constraints.
+
+ The RotateArray class below successfully executed 37 out of 38 test cases from Leetcode. Failed the last test because the array tested was huge with over a 6000 array elements and K was 54944.
+
+ 
+```C#
+ internal class RotateArray
+ {
+
+
+
+     public void Rotate(int[] nums, int k)
+     {
+         int elementsCount = nums.Length;
+         int lastIndex = nums.Length - 1;
+         k %= elementsCount; // Handle cases where k > elementsCount
+
+         if (k == 0 || elementsCount <= 1) return; // No rotation needed for these cases
+
+         int[] arrayHolderD = new int[k];
+
+
+
+
+         int sStart = 0, steps = 1;
+
+         int counter = elementsCount - 1;
+
+
+
+
+
+         int[] tempNumsArray = new int[nums.Length];
+
+         for (int i = 0; i < nums.Length; i++)
+         {
+             tempNumsArray[i] = nums[i];
+
+         }
+
+
+       //  Console.WriteLine($"Initial array :[" + string.Join(",", tempNumsArray) + "]\n");
+
+        // Console.WriteLine($"If K = {k} , then :\n");
+
+     //    Console.WriteLine($"#### Swap array #####\n");
+
+
+
+
+
+         if (lastIndex != 0)
+         {
+
+             for (int j = 0; j < k; j++)
+             {
+
+                 if (j == 0)
+                 {
+                     nums[j] = tempNumsArray[lastIndex];
+
+                 }
+
+                 if (j == 1)
+                 {
+                     nums[0] = tempNumsArray[lastIndex - 1];
+                     nums[j] = tempNumsArray[lastIndex];
+
+                 }
+
+                 // swip array ,shift position then add
+                 else if (j > 1)
+                 {
+
+
+
+
+                     for (int r2 = 0; r2 < j; r2++)
+                     {
+
+                         arrayHolderD[r2 + 1] = nums[r2];
+
+                     }
+                     arrayHolderD[0] = tempNumsArray[lastIndex - j];
+
+
+                     for (int r3 = 0; r3 <= arrayHolderD.Length - 1; r3++)
+                     {
+                         nums[r3] = arrayHolderD[r3];
+                     }
+
+
+                 }
+
+
+
+                 //////
+                 for (int b = j + 1; b <= counter; b++)
+                 {
+                     nums[b] = tempNumsArray[sStart];
+                     //if(b > 0) { arrayHolderC[b - 1] = 0; }
+
+                     sStart++;
+                 }
+
+
+               //  Console.WriteLine($"Step {steps}  : [" + string.Join(",", nums) + "]\n");
+                 if (j > k - 2)
+                 {
+                     counter--;
+                 }
+
+                 sStart = 0;
+                 steps++;
+
+
+             }
+
+
+
+
+
+         }
+
+
+
+      //   Console.WriteLine($"Final result  : [" + string.Join(",", nums) + "]\n");
+
+     }
+
 ```
 
 </details>
